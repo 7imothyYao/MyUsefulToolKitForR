@@ -1,4 +1,4 @@
-# 将汉字转换为拼音首字母
+# 提取汉字拼音首字母
 # Converts Chinese characters to the initials of their pinyin representation
 # Args:
 #   char1: 输入的汉字字符串 Input Chinese characters as a string
@@ -65,7 +65,7 @@ py_ini <- function(char1, first5 = TRUE, to_upper = TRUE) {
     return(result)
   }
   
-  # 提取所有汉字的首字母
+  # 提取汉字拼音的首字母
   initials <- sapply(py_char, ext_ini)
   initials <- unname(initials)
   
@@ -77,8 +77,6 @@ py_ini <- function(char1, first5 = TRUE, to_upper = TRUE) {
 }
 
 
-# 将汉字转换为拼音首字母
-# Converts Chinese characters to the initials of their pinyin representation
 # Args:
 #   char1: 输入的汉字字符串 Input Chinese characters as a string
 #   first5: 是否只取前五个字母 (默认为TRUE) 
